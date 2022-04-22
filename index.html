@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="./assets/img/mtp.jpg">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.1.1-web/css/all.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="music-player">
+            <div class="music-contains">
+                <div class="music-heading">
+                    <div class="music-inf">
+                        <!-- Header -->
+                        <div class="music-status">Now Playing</div>
+                        <div class="music-title">String 57th</div>
+
+                        <!-- CD -->
+                        <div class="music-cd">
+                            <img src="./assets/img/mtp.jpg" alt="" class="music-cd-avt" id="music-cd">
+                        </div>
+                    </div>
+
+                    <!-- Control -->
+                    <div class="music-control">
+                        <div class="repeat-btn btn mouse"><i class="fa-solid fa-repeat"></i></div>
+                        <div class="prev-btn btn mouse"><i class="fa-solid fa-backward-fast"></i></div>
+                        <div class="play-btn toggle-play-btn mouse"><i class="fa-solid fa-play"></i></div>
+                        <div class="pause-btn toggle-pause-btn mouse"><i class="fa-solid fa-pause"></i></div>
+                        <div class="next-btn btn mouse"><i class="fa-solid fa-forward-fast"></i></div>
+                        <div class="shuffle-btn btn mouse"><i class="fa-solid fa-shuffle"></i></div>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="music-progress">
+                        <input class="music-bar" type="range" min="0" max="100" value="0" step="1">
+                    </div>
+
+                    <audio id="audio" src=""></audio>
+
+                </div>
+            </div>
+
+            <!-- Playlists -->
+            <div class="song-lists">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/main.js"></script>
+
+</html>

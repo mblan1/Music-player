@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Nunitos', Helvetica, sans-serif;
+}
+
+#main {
+    position: relative;
+}
+
+.mouse {
+    cursor: pointer;
+}
+
+.none {
+    display: none !important;
+}
+
+.active {
+    color: red;
+}
+
+.active-song {
+    background-color: red !important;
+    color: white;
+}
+
+
+/* heading */
+
+.music-contains {
+    position: fixed;
+    width: 414px;
+    background-color: aliceblue;
+    z-index: 10;
+}
+
+.music-heading {
+    padding: 12px;
+}
+
+#music-player {
+    position: relative;
+    width: 414px;
+    margin: 0 auto;
+}
+
+.music-status {
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+.music-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.music-cd {
+    width: 190px;
+    padding: 12px 0;
+    margin: 0 auto;
+}
+
+.music-cd-avt {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.music-inf {
+    text-align: center;
+}
+
+
+/* control */
+
+.music-control {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+}
+
+.music-control div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 0 14px;
+}
+
+.play-btn,
+.pause-btn {
+    width: 44px;
+    height: 44px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.play-btn {
+    z-index: 2;
+}
+
+.pause-btn {
+    position: absolute;
+    left: 45%;
+    z-index: 1;
+}
+
+
+/* progress */
+
+.music-progress {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.music-progress .music-bar {
+    width: 50%;
+}
+
+
+/* song list */
+
+.song-lists {
+    position: absolute;
+    top: 368px;
+    width: 414px;
+    background-color: #b3a6a657;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    margin: 12px;
+    border-radius: 12px;
+    transition: box-shadow .3s, aliceblue 2s;
+}
+
+.song-thumb {
+    padding: 12px;
+}
+
+.song-thumb-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.song-profile {
+    margin-left: 15px;
+}
+
+.song-owner {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.song-option {
+    position: absolute;
+    right: 16px;
+    padding: 16px;
+}
