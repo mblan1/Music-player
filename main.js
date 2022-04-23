@@ -27,71 +27,71 @@
         songs: [{
                 name: 'Có chắc yêu là đây',
                 singer: 'Sơn Tùng M-TP',
-                path: '../../assets/audio/CoChacYeulaDay.mp3',
-                img: '../../assets/img/mtp.jpg',
+                path: './assets/audio/CoChacYeulaDay.mp3',
+                img: './assets/img/mtp.jpg',
             },
 
             {
                 name: 'Anhs Ems',
                 singer: 'QNT',
-                path: '../../assets/audio/AnhsEms.mp3',
-                img: '../../assets/img/anhsems.jpg',
+                path: './assets/audio/AnhsEms.mp3',
+                img: './assets/img/anhsems.jpg',
             },
 
             {
                 name: 'Cưới Thôi',
                 singer: 'Masew',
-                path: '../../assets/audio/CuoiThoi.mp3',
-                img: '../../assets/img/cuoithoi.jpg',
+                path: './assets/audio/CuoiThoi.mp3',
+                img: './assets/img/cuoithoi.jpg',
             },
 
             {
                 name: 'Feel My Rhythm',
                 singer: 'Red Velvet',
-                path: '../../assets/audio/FeelMyRhythm.mp3',
-                img: '../../assets/img/fellmyrhythm.jpg',
+                path: './assets/audio/FeelMyRhythm.mp3',
+                img: './assets/img/fellmyrhythm.jpg',
             },
 
             {
                 name: 'Âm thầm bên em',
                 singer: 'Sơn Tùng M-TP',
-                path: '../../assets/audio/AmThamBenEm.mp3',
-                img: '../../assets/img/AmThamBenEm.jpg',
+                path: './assets/audio/AmThamBenEm.mp3',
+                img: './assets/img/AmThamBenEm.jpg',
             },
 
             {
                 name: 'Pay Phone',
                 singer: 'Maroon5',
-                path: '../../assets/audio/PayPhone.mp3',
-                img: '../../assets/img/PayPhone.jpg',
+                path: './assets/audio/PayPhone.mp3',
+                img: './assets/img/PayPhone.jpg',
             },
 
             {
                 name: 'Chúng ta của hiện tại',
                 singer: 'Sơn Tùng M-TP',
-                path: '../../assets/audio/ChungTaCuaHienTai.mp3',
-                img: '../../assets/img/ChungTaCuaHienTai.jpg',
+                path: './assets/audio/ChungTaCuaHienTai.mp3',
+                img: './assets/img/ChungTaCuaHienTai.jpg',
             },
 
             {
                 name: 'Thêm bao nhiêu lâu',
                 singer: 'Đạt G',
-                path: '../../assets/audio/ThemBaoLau.mp3',
-                img: '../../assets/img/ThemBaoLau.jpg',
+                path: './assets/audio/ThemBaoLau.mp3',
+                img: './assets/img/ThemBaoLau.jpg',
             },
 
             {
                 name: 'Muộn rồi mà sao còn',
                 singer: 'Sơn Tùng M-TP',
-                path: '../../assets/audio/MuonRoiMaSaoCon.mp3',
-                img: '../../assets/img/MuonRoiMaSaoCon.jpg',
+                path: './assets/audio/MuonRoiMaSaoCon.mp3',
+                img: './assets/img/MuonRoiMaSaoCon.jpg',
             },
 
             {
                 name: '100 Years Love',
                 singer: 'NamDuc',
-                path: '../../assets/audio/100Love.mp3',
-                img: '../../assets/img/100Love.jpg',
+                path: './assets/audio/100Love.mp3',
+                img: './assets/img/100Love.jpg',
             },
         ],
 
@@ -111,7 +111,7 @@
         render: function() {
             const html = this.songs.map((song, index) => {
                 return `<div class="song-item mouse ${index === this.currentIndex ? 'active-song': ''}" data-index=${index}>
-            <div class="song-thumb"><img class="song-thumb-img" src="${song.img}" alt=""></div>
+            <div class="song-thumb"><img width="190px" height="190px" class="song-thumb-img" src="${song.img}" alt=""></div>
             <div class="song-profile">
                 <div class="song-title">${song.name}</div>
                 <div class="song-owner">${song.singer}</div>
