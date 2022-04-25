@@ -150,7 +150,8 @@
             }
             audio.onplay = function() {
                 _this.isPlaying = true;
-                playBtn.style.zIndex = 0;
+                playBtn.style.display = 'none';
+                pauseBtn.style.display = 'block';
                 cdAnimate.play()
 
             }
@@ -162,6 +163,8 @@
             }
             audio.onpause = function() {
                 _this.isPlaying = false;
+                pauseBtn.style.display = 'none';
+                playBtn.style.display = 'block';
                 playBtn.style.zIndex = 2
                 cdAnimate.pause()
 

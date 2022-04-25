@@ -31,6 +31,19 @@ html {
 }
 
 
+/* responsive */
+
+@media (max-width: 413px) {
+    #music-player {
+        width: auto !important;
+    }
+    .music-contains,
+    .song-lists {
+        width: 100% !important;
+    }
+}
+
+
 /* heading */
 
 .music-contains {
@@ -86,7 +99,7 @@ html {
     margin: 0px 60px;
 }
 
-.music-control div {
+.control-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +116,8 @@ html {
     color: white;
     background-color: red;
     border-radius: 50%;
+    line-height: 44px;
+    text-align: center;
 }
 
 .play-btn {
@@ -110,9 +125,10 @@ html {
 }
 
 .pause-btn {
-    position: absolute;
+    /* position: absolute; */
     left: 45%;
     z-index: 1;
+    display: none;
 }
 
 
