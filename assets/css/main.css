@@ -94,6 +94,7 @@ html {
 /* control */
 
 .music-control {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin: 0px 60px;
@@ -129,6 +130,25 @@ html {
     left: 45%;
     z-index: 1;
     display: none;
+}
+
+.volume-icon {
+    position: absolute;
+    top: 2px;
+    left: -42px;
+    padding: 12px;
+    /* height: 50px; */
+}
+
+.volume-btn {
+    display: none;
+    position: absolute;
+    padding: 12px 0;
+    /* background: red; */
+    bottom: 134px;
+    left: -10px;
+    transform: rotate(-90deg);
+    transition: all .3s linear;
 }
 
 

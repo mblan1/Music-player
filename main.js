@@ -15,6 +15,9 @@
     const prevBtn = $('.prev-btn')
     const shuffleBtn = $('.shuffle-btn')
     const repeatBtn = $('.repeat-btn')
+    const volumePercent = $('.volume-percent')
+    const volumeBar = $('.volume-btn')
+    const volumeBtn = $('.volume-icon')
 
 
     const app = {
@@ -22,6 +25,8 @@
         isPlaying: false,
         isShuffle: false,
         isRepeat: false,
+        volumeCount: 50,
+        isVolume: false,
         config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
 
         songs: [{
@@ -158,9 +163,10 @@
 
             // pause
             pauseBtn.onclick = function() {
-                audio.pause()
+                    audio.pause()
 
-            }
+                }
+                // onpause
             audio.onpause = function() {
                 _this.isPlaying = false;
                 pauseBtn.style.display = 'none';
@@ -254,6 +260,25 @@
                 }
             }
 
+            // volumebtn click
+            volumeBtn.onclick = function() {
+                _this.isVolume = !_this.isVolume;
+                if (_this.isVolume == true) {
+                    volumeBar.style.display = 'block'
+                } else {
+                    volumeBar.style.display = 'none'
+
+                }
+                volumeBtn.classList.toggle('active', _this.isVolume)
+            }
+
+            // volume change
+            volumePercent.onchange = function(e) {
+                const volume = e.target.value;
+                audio.volume = volume / 100
+                _this.setConfig('volume', volume)
+            }
+
         },
 
         scrollToActiveSong: function() {
@@ -268,8 +293,7 @@
         loadConfig: function() {
             this.isShuffle = this.config.isShuffle
             this.isRepeat = this.config.isRepeat
-
-
+            this.volumeCount = this.config.volume
         },
 
         loadCurrentSong: function() {
@@ -323,6 +347,8 @@
             // show active setting
             repeatBtn.classList.toggle('active', this.isRepeat)
             shuffleBtn.classList.toggle('active', this.isShuffle)
+            volumePercent.value = this.config.volume
+            audio.volume = this.config.volume / 100
         }
     }
 

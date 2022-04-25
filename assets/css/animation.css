@@ -7,24 +7,32 @@
     }
 }
 
-.btn:hover {
-    height: 44px;
-    background-color: #69626229;
-    border-radius: 50%;
-    transition: all .5s ease;
-}
+
+/* btn */
 
 
-/* song */
+/* media hover */
 
-.song-item:hover {
-    box-shadow: rgba(161, 23, 30, 0.178) 0px 8px 24px;
-}
-
-.song-item:active {
-    opacity: 0.8;
-}
-
-.song-option:hover {
-    color: red;
+@media (hover: hover) {
+    .btn:hover {
+        height: 44px;
+        background-color: #69626229;
+        border-radius: 50%;
+        transition: all .5s ease;
+    }
+    .volume-icon:hover {
+        background-color: #69626229;
+        border-radius: 50%;
+        transition: all .5s ease;
+    }
+    /* song */
+    .song-item:hover {
+        box-shadow: rgba(161, 23, 30, 0.178) 0px 8px 24px;
+    }
+    .song-item:active {
+        opacity: 0.8;
+    }
+    .song-option:hover {
+        color: red;
+    }
 }
