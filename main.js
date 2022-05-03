@@ -30,6 +30,13 @@
         config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
 
         songs: [{
+                name: 'There\'s No One At All',
+                singer: 'Sơn Tùng M-TP',
+                path: './assets/audio/TNOAL.mp3',
+                img: './assets/img/TNOAL.jpg',
+            },
+
+            {
                 name: 'Có chắc yêu là đây',
                 singer: 'Sơn Tùng M-TP',
                 path: './assets/audio/CoChacYeulaDay.mp3',
