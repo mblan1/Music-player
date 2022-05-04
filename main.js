@@ -260,8 +260,8 @@
                         _this.currentIndex = Number(song.dataset.index)
                         _this.loadCurrentSong()
                         _this.render()
-                        audio.load()
-                        audio.play()
+                        _this.loadSong()
+                            // audio.play()
                     }
 
                     // option
@@ -308,8 +308,15 @@
         },
 
         loadSong: function() {
-            audio.load()
-            audio.play()
+            const songPlay = audio.play()
+
+            if (songPlay !== undefined) {
+                songPlay.then(() => {
+                    console.log('Audio is playing');
+                }).catch(e => {
+                    console.log(e);
+                })
+            }
         },
 
         loadCurrentSong: function() {
