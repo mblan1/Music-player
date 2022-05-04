@@ -204,7 +204,8 @@
                 } else {
                     _this.nextSong()
                 }
-                audio.play()
+                // audio.play()
+                _this.loadSong()
                 _this.render()
                 _this.scrollToActiveSong()
             }
@@ -216,7 +217,8 @@
                 } else {
                     _this.prevSong()
                 }
-                audio.play()
+                // audio.play()
+                _this.loadSong()
                 _this.render()
                 _this.scrollToActiveSong()
 
@@ -241,7 +243,8 @@
             // audio end
             audio.onended = function() {
                 if (_this.isRepeat) {
-                    audio.play()
+                    // audio.play()
+                    _this.loadSong()
                 } else {
                     nextBtn.click()
                 }
@@ -257,6 +260,7 @@
                         _this.currentIndex = Number(song.dataset.index)
                         _this.loadCurrentSong()
                         _this.render()
+                        audio.load()
                         audio.play()
                     }
 
@@ -303,6 +307,11 @@
             this.volumeCount = this.config.volume
         },
 
+        loadSong: function() {
+            audio.load()
+            audio.play()
+        },
+
         loadCurrentSong: function() {
             heading.textContent = this.currentSong.name;
             cdThumb.src = this.currentSong.img
@@ -333,7 +342,8 @@
 
             this.currentIndex = newIndex;
             this.loadCurrentSong()
-            audio.play()
+                // audio.play()
+            _this.loadSong()
         },
 
         start: function() {
